@@ -13,7 +13,7 @@ short presentation and then we discuss.
 
 Unfortunately, this is kind of inefficient as far as actually _learning_
 about these topics goes. One volunteer has to do a lot of work to prepare
-the material and lead the discussion, for very little reward. Once the
+the material and lead the discussion for very little reward. Once the
 session is over, the material they've prepared is gone. We should keep this
 material somewhere, and we should make it easy to repurpose it.
 
