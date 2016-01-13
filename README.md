@@ -53,7 +53,12 @@ this book? For tutorials, keep a record of the exercises and solutions.
 Basically, so someone in the future could come back to learn about
 something we've already covered.
 
+__Note about aggregation__: if you've aggregated a good set of resources,
+consider submitting your list to [Metacademy][] as well. That would be a
+nice thing to do for everyone, and you're a nice person, right?
+
 [karpathy]: https://karpathy.github.io/
 [shakir]: http://blog.shakirm.com/
 [eyescream]: http://soumith.ch/eyescream/
 [gal]: http://mlg.eng.cam.ac.uk/yarin/blog.html
+[metacademy]: https://wiki.inf.ed.ac.uk/ANC/PIGlets
