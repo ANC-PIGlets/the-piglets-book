@@ -2,6 +2,8 @@
 The PIGlets Book
 ================
 
+[![Join the chat at https://gitter.im/ANC-PIGlets/the-piglets-book](https://badges.gitter.im/ANC-PIGlets/the-piglets-book.svg)](https://gitter.im/ANC-PIGlets/the-piglets-book?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 The point of PIGlets is that it's supposed to bring students in groups
 working on probabilistic inference together to learn about topics that
 weren't covered in the postgraduate courses (most likely PMR and MLPR). How
