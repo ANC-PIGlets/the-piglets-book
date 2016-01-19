@@ -1,27 +1,16 @@
 
-Variational Inference via the GMM
-=================================
+Variational Bayes
+=================
 
-Applying variational inference can be kind of complicated, especially with
-new problems. This tutorial has the aim of explaining the different options
-in variational inference and where to apply them. Specifically, we're going
-to focus on different ways to deal with the case of the mixture of
-multivariate Gaussians. Hopefully, just working with the same model in
-different ways illustrates the differences between the methods in a useful
-way.
+This tutorial basically just comes from me seeing some really short code for 
+doing a kind of variational inference on arbitrary latent variable models called
+"Black Box Variational Inference". I thought it would be interesting to contrast
+directly with the analytic method of deriving iterative updates.
 
 Specifically, we're going to cover:
 
 * Variational Bayes with closed form updates.
-* Stochastic Variational Inference
 * Black-box Variational Inference
-* What the heck is amortised inference?
-
-What we're not going to cover:
-
-* What is the variational free energy?
-* Why do we want to minimize the KL divergence?
-* Why should I use the forward versus the reverse KL divergence?
 
 Prerequisites
 -------------
@@ -44,22 +33,28 @@ There are some subtleties which you might not expect. Luckily, we have a
 notebook ready for you to start working on in the browser [right
 here][vbinder] (although, it's a little flaky).
 
-Stochastic Variational Inference
---------------------------------
-
-Unsure what to do with this at the moment.
-
 Black-Box Variational Inference
 -------------------------------
 
-If you've already studied all the stuff above, this is where I'm going to
-bring together some things you've hopefully not looked into yet.
+[Black-Box Variational Inference][bbox] is what it sounds like: [given any
+probabilistic model, we'd like to perform inference in it without having to do any
+algebra][bboxvid]. Which seems useful for a lot of problems, but how does it
+work? Well, recently a paper came out called [Black Box Stochastic Variational
+Inference in Five Lines of Python][fivelines], and this paper is a lot of fun.
+Black-box stochastic variational inference depends on having stochastic
+gradients of the ELBO, and this paper really exploits automatic differentiation
+with [Autograd][] (their own library).
 
-(Follow with exercises covering black box with parameterised distributions
-and amortised inference).
-
-(Also include links to Bayesian neural network in less than 100 lines).
+The exercise is to take apart the [Black Box SVI example][autoex] in a
+notebook and explain what's happening. Then, build on this to fit a Gaussian
+Mixture model with a differentiable parameterised model, using the classic Iris
+dataset.
 
 [pre]: https://www.metacademy.org/graphs/concepts/variational_inference
 [bishop]: http://research.microsoft.com/users/cmbishop/PRML/index.htm
 [vbinder]: http://mybinder.org/repo/gngdb/vbgmm
+[bbox]: http://jmlr.org/proceedings/papers/v33/ranganath14.pdf
+[bboxvid]: https://www.youtube.com/watch?v=QugI-7QacEY
+[fivelines]: http://people.seas.harvard.edu/~dduvenaud/papers/blackbox.pdf
+[autograd]: https://github.com/HIPS/autograd
+[autoex]: https://github.com/HIPS/autograd/blob/master/examples/black_box_svi.py
