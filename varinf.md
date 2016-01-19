@@ -48,7 +48,8 @@ with [Autograd][] (their own library).
 The exercise is to take apart the [Black Box SVI example][autoex] in a
 notebook and explain what's happening. Then, build on this to fit a Gaussian
 Mixture model with a differentiable parameterised model, using the classic Iris
-dataset.
+dataset. Worked example is [in this repository][bbsvirepo], please submit pull 
+requests if you come up with something interesting!
 
 [pre]: https://www.metacademy.org/graphs/concepts/variational_inference
 [bishop]: http://research.microsoft.com/users/cmbishop/PRML/index.htm
@@ -58,3 +59,4 @@ dataset.
 [fivelines]: http://people.seas.harvard.edu/~dduvenaud/papers/blackbox.pdf
 [autograd]: https://github.com/HIPS/autograd
 [autoex]: https://github.com/HIPS/autograd/blob/master/examples/black_box_svi.py
+[bbsvirepo]: https://github.com/ANC-PIGlets/bbsvi
