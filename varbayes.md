@@ -30,8 +30,9 @@ exercises with solutions available.
 This is a programming exercise. Given the equations for updates in Bishop's
 example, how do we actually code up the mixture model (and get it to work)?
 There are some subtleties which you might not expect. Luckily, we have a
-notebook ready for you to start working on in the browser [right
-here][vbinder] (although, it's a little flaky).
+notebook ready for you to start working on in the browser [right 
+here][vbinder] (although, it's a little flaky). If it's not working, you
+could just clone [the repo][vbgmm] and run it locally.
 
 Black-Box Variational Inference
 -------------------------------
@@ -60,3 +61,4 @@ requests if you come up with something interesting!
 [autograd]: https://github.com/HIPS/autograd
 [autoex]: https://github.com/HIPS/autograd/blob/master/examples/black_box_svi.py
 [bbsvirepo]: https://github.com/ANC-PIGlets/bbsvi
+[vbgmm]: http://app.mybinder.org/2894982977/notebooks/index.ipynb
