@@ -29,7 +29,7 @@ I will aim to cover
   * exact Hamiltonian dynamics and why they are a useful basis for a MCMC method
   * how to approximate Hamiltonian dynamics in discrete time
   * role of the mass matrix and injection of noise via the momentum variables
-  * pulling everything together in a simple `python` implementation [TODO: link to IPython notebook here]
+  * pulling everything together in a simple `python` implementation [[repository here](https://github.com/ANC-PIGlets/gradient-based-mcmc)].
   
 Other useful resources if you want to look at this in more depth:
 
