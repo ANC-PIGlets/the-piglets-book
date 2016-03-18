@@ -1,6 +1,17 @@
 
 
 # Bayesian Optimization #
+__Prerequisites__
+
+Most Bayesian Optimization techniques use Gaussian Processes to form their
+acquisition functions.  As Gaussian Processes are not focused on in most of
+the machine learning courses at Edinburgh, you might want to revise
+[Gaussian Processes](gaussian-processes.md).
+
+Also, if you would like to prepare with a fast introduction, including a
+_long list_ of interesting applications then you may want to watch 
+[Nando de Freitas' lecture on Bayesian Optimization](https://youtu.be/YB64VoGQsK8).
+
 __Overview__
 
 Bayesian optimization (BO) is a modern approach to global optimization of blackbox-style functions. For the most part, BO techniques assume that the target function is expensive to evaluate and, therefore, seek to minimize the number of queries made during the process of optimization.
