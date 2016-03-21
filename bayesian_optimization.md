@@ -30,4 +30,13 @@ Paper   | Contents
 
 __Demonstrations__
 
-To come...
+Demonstrations were done using [MOE][] docker example.
+
+__More Interesting Talks__
+
+The 2015 [workshop on Gaussian Processes for Global Optimisation][gpss] has
+some good talks on newer work involving Bayesian optimization, including a
+talk by Nando de Freitas on key challenges.
+
+[moe]: https://github.com/Yelp/MOE
+[gpss]: http://gpss.cc/gpgo15/
