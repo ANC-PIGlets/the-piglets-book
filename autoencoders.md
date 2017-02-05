@@ -1,4 +1,8 @@
 
+
+Autoencoders
+============
+
 Autoencoders are a neural networks where the output _is the input_. This is
 a tutorial covering how to write an autoencoder from scratch and train it
 on a small dataset. This involves writing a simple [feedforward neural
