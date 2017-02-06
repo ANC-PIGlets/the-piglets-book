@@ -314,6 +314,46 @@ roles : [
 	   ]});
 ```
 
+Logging Stuff
+-------------
+
+So, you're training a neural network and you want to look at the learning
+curve trace of some hyperparameter setting run you've run. In the
+documentation for Sacred it says to [use the InfoDict][infodict], but gives
+no example how to do this.
+
+One way is the following example, by capturing a function and passing the
+special `_run` argument, and accessing the InfoDict through that. Doing
+this, it would be easy to make an arbitrary logging function for something
+like neural network losses and append data to a list whenever it is called.
+
+```
+from sacred import Experiment
+from sacred.observers import MongoObserver
+from secrets import mongo_uri
+
+# Create an Experiment instance and provide it with a name
+ex = Experiment('hello_world')
+
+ex.observers.append(MongoObserver.create(
+    url=mongo_uri,
+    db_name='experiments'))
+
+# this must be a captured function to pass the _run arg
+@ex.capture
+def save_learning_curve(_run):
+    _run.info['learning curve'] = range(10)
+
+# This function should be executed so we are decorating it with @ex.automain
+@ex.automain
+def main():
+    print('Hello world!')
+    save_learning_curve()
+```
+
+In the future, I may write code to append such data and then use
+[Holoviews][] to plot it, after pulling it out of a Sacred MongoDB record.
+
 [sacred]: https://github.com/IDSIA/sacred
 [idsia]: http://www.idsia.ch/idsia_en/institute.html
 [decorators]: https://wiki.python.org/moin/PythonDecorators
@@ -329,3 +369,5 @@ roles : [
 [userpass]: http://stackoverflow.com/questions/7014953/i-need-to-securely-store-a-username-and-password-in-python-what-are-my-options
 [sacredbrowser]: https://github.com/michaelwand/SacredBrowser
 [pymongo]: https://gist.github.com/gngdb/f1bcff4c4b546ff17ee91884061f75ad
+[infodict]: http://sacred.readthedocs.io/en/latest/observers.html#info-dict
+[holoviews]: http://holoviews.org/
